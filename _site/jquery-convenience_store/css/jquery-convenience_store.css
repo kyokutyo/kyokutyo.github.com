@@ -1,0 +1,144 @@
+body {
+  color: #143;
+  padding: 20px;
+  font-size: 18px;
+  font-family: 'Helvetica';
+  letter-spacing: 0.1em;
+}
+
+a {
+  color: #348;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #56a;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+#sub h2 {
+  font-size: 24px;
+}
+
+p.description {
+  font-size: 20px;
+  padding: 20px 20px 30px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+#main {
+  float: left;
+  margin-right: -450px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+#sub {
+  float: right;
+  margin-bottom: 50px;
+  width: 430px;
+}
+
+#demo h2,
+#usage h2,
+#usage pre,
+#brands h2,
+#brands p,
+#using h2,
+#using ul {
+  display: block;
+  margin-right: 450px;
+  overflow: auto;
+}
+
+#using ul,
+#download ul,
+#links ul {
+  margin-top: 5px;
+  padding-left: 1.3em;
+}
+
+#using ul li,
+#download ul li,
+#links ul li {
+  list-style-type: disc;
+}
+
+#usage pre {
+  padding: 5px 10px;
+}
+
+#usage pre code {
+  text-shadow: 0 1px 0 rgba(255,255,255,.9);
+}
+
+#brands p,
+#notes p {
+  padding: 10px;
+}
+
+#brands table {
+  margin: 0 10px;
+  width: 450px;
+}
+
+#brands table tbody th,
+#brands table tbody td {
+  border-collapse: collapse;
+  border: solid 1px #ddd;
+  padding: 5px 20px;
+}
+
+#brands table tbody th {
+  width: 140px;
+}
+
+#usage pre,
+#brands table tbody th {
+  background: #e6efef;
+}
+
+#usage pre code,
+#brands table tbody td i {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+#usage pre,
+#brands table {
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+
+footer {
+  border-top: solid 1px #ddd;
+  clear: both;
+  height: 58px;
+  width: 100%;
+}
+
+footer img {
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  float: left;
+  margin: 10px 0 0 10px;
+}
+
+footer p {
+  padding-left: 75px;
+  padding-top: 22px;
+}

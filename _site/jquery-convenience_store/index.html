@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>CONVENIENCE STORE - A jQuery plugin provides Japanese convenience store styles.</title>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.0/build/cssreset/cssreset-min.css" />
+	<link rel="stylesheet" href="/jquery-convenience_store/css/jquery-convenience_store.css" />
+	<script type="text/javascript" src="http://google.com/jsapi"></script>
+	<script type="text/javascript">google.load('jquery', 1);</script>
+	<script type="text/javascript" src="/jquery-convenience_store/js/jquery.convenience_store.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var $headings = $('h1, h2');
+			var brands = [{
+				"code": "seveneleven",
+				"name": "SEVEN ELEVEN"
+			}, {
+				"code": "familymart",
+				"name": "FamilyMart"
+			}, {
+				"code": "lawson",
+				"name": "LAWSON"
+			}, {
+				"code": "owson",
+				"name": "OWSON"
+			}];
+			var i = Math.floor(Math.random()*4);
+			var brand_code = brands[i].code;
+			var brand_name = brands[i].name;
+			$('h1>span').html(brand_name);
+			$headings.convenience_store(brand_code);
+			$('#brand').html(brand_code);
+			$('a[rel=external]').on('click', function() {
+				window.open($(this).attr('href'), '');
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<h1>Convenience Store - <span></span></h1>
+		<p class="description">
+			A jQuery plugin provides Japanese convenience store styles.
+		</p>
+		<div id="main">
+			<section id="usage">
+				<h2>Usage</h2>
+				<pre><code>&lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.convenience_store.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$().ready(function() {
+	$(selector).convenience_store('<span id="brand"></span>');
+});
+&lt;/script&gt;</code></pre>
+			</section>
+			<section id="brands">
+				<h2>Brands</h2>
+				<p>This plugin needs one argment to select convenience-store-brand.</p>
+				<table>
+					<tbody>
+						<tr>
+							<th rowspan="4">available brands</th>
+							<td><i>seveneleven</i></td>
+						</tr>
+						<tr>
+							<td><i>familymart</i></td>
+						</tr>
+						<tr>
+							<td><i>lawson</i></td>
+						</tr>
+						<tr>
+							<td><i><a href="http://atmarkjojo.org/archives/2012/2012-07-24-002503.html" rel="external">owson</a></i></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section id="using">
+				<h2>Using Services</h2>
+				<ul>
+					<li>
+						<a href="http://www.google.com/webfonts" rel="external">Google Web Fonts</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div id="sub">
+			<section id="download">
+				<h2>Download</h2>
+				<ul>
+					<li>
+						<a href="https://raw.github.com/kyokutyo/jquery-convenience_store/master/jquery.convenience_store.js" rel="external">Latest version</a>
+						(<a href="https://github.com/kyokutyo/jquery-convenience_store/" rel="external">GitHub</a>)
+					</li>
+				</ul>
+			</section>
+			<section id="links">
+				<h2>Links</h2>
+				<ul>
+					<li><a href="http://www.sej.co.jp/" rel="external">セブン-イレブン～近くて便利～</a></li>
+					<li><a href="http://www.family.co.jp/" rel="external">あなたと、コンビに、FamilyMart｜FamilyMart</a></li>
+					<li><a href="http://www.lawson.co.jp/index.html" rel="external">マチのほっとステーション LAWSON｜ローソン</a></li>
+				</ul>
+			</section>
+			<section id="notes">
+				<h2>Notes</h2>
+				<p>Please tell me a better font, if you know.</p>
+				<p>Maybe should adjust for multiline.</p>
+			</section>
+		</div>
+	</div>
+	<footer>
+		<img alt="" src="https://twimg0-a.akamaihd.net/profile_images/16670112/070804_normal.jpg" />
+		<p>
+			&copy; <a href="http://kyokutyo.com/">kyokutyo</a>
+			(<a href="http://twitter.com/kyokutyo/" rel="external">Twitter</a>,
+			<a href="http://kyokutyo.tumblr.com/" rel="external">Tumblr</a>)
+		</p>
+	</footer>
+	<a href="https://github.com/kyokutyo/jquery-convenience_store/" rel="external" style="z-index: 999;">
+		<img style="position: absolute; top: 0; right: 0; border: 0;" alt="Fork me on GitHub"
+					src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+	</a>
+
+</body>
+</html>

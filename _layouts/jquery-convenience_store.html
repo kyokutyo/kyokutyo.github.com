@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>{{page.title}}</title>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.0/build/cssreset/cssreset-min.css" />
+	<link rel="stylesheet" href="/jquery-convenience_store/css/jquery-convenience_store.css" />
+	<script type="text/javascript" src="http://google.com/jsapi"></script>
+	<script type="text/javascript">google.load('jquery', 1);</script>
+	<script type="text/javascript" src="/jquery-convenience_store/js/jquery.convenience_store.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var $headings = $('h1, h2');
+			var brands = [{
+				"code": "seveneleven",
+				"name": "SEVEN ELEVEN"
+			}, {
+				"code": "familymart",
+				"name": "FamilyMart"
+			}, {
+				"code": "lawson",
+				"name": "LAWSON"
+			}, {
+				"code": "owson",
+				"name": "OWSON"
+			}];
+			var i = Math.floor(Math.random()*4);
+			var brand_code = brands[i].code;
+			var brand_name = brands[i].name;
+			$('h1>span').html(brand_name);
+			$headings.convenience_store(brand_code);
+			$('#brand').html(brand_code);
+			$('a[rel=external]').on('click', function() {
+				window.open($(this).attr('href'), '');
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+{{ content }}
+</body>
+</html>
